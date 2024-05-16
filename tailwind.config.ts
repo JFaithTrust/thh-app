@@ -172,6 +172,10 @@ module.exports = {
       ],
     },
     extend: {
+      fontFamily: {
+        rubik: ["Rubik Wet Paint", "system-ui"],
+        rubikGlitch: ["Rubik Glitch Pop", "system-ui"],
+      },
       colors: {
         "primary-500": "#877EFF",
         "secondary-500": "#FFB620",
