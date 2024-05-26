@@ -69,17 +69,16 @@ export const POST = async (request: Request) => {
     evnt?.data ?? {};
 
     try {
-      // @ts-ignore
       await createCommunity(
-          // @ts-ignore
-          id,
-          name,
-          slug,
-          logo_url || image_url,
+          id.toString(),
+          name.toString(),
+          slug.toString(),
+          logo_url.toString() || image_url.toString(),
           "org bio",
-          created_by
+          created_by.toString()
       );
 
+      console.log("connected");
       return NextResponse.json({ message: "User created" }, { status: 201 });
     } catch (err) {
       console.log(err);
